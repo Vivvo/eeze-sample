@@ -1,0 +1,71 @@
+{{set . "title" "Eeze Doors"}}
+{{template "header.html" .}}
+
+
+<main style="height: 90%">
+    <!-- Spotlight -->
+    <section class="slice pb-0 bg-primary bg-cover bg-lg-cover bg-size--contain pt-lg" data-separator="bottom-wave"
+             style="height: 100%">
+        <div class="spotlight-holder">
+            <div class="container d-flex align-items-end">
+                <div class="col">
+                    <div class="row row-grid">
+                        <div class="col-lg-7 align-self-center">
+                            <div class="text-center text-lg-left">
+                                <h2 class="heading h1 text-white mb-4">The app that will change your everyday <span
+                                        class="text-info typed" id="type-example"
+                                        data-type-this="identity., security., authentication., authorization."></span>
+                                </h2>
+                                <p class="lead lh-180 text-white">
+                                    We take security seriously at Vivvo. That's why we secure our offices with Eeze.
+                                    Just scan the QR code with your Eeze app to get in!</p>
+                                <div class="mt-5">
+                                    <a href="#" class="btn btn-app-store btn-translate--hover mr-lg-4 mb-4">
+                                        <i class="fab fa-apple"></i>
+                                        <span class="btn-inner--text">Download on the</span>
+                                        <span class="btn-inner--brand">App Store</span>
+                                    </a>
+                                    <a href="#" class="btn btn-app-store btn-translate--hover mb-4">
+                                        <i class="fab fa-google-play"></i>
+                                        <span class="btn-inner--text">Download on the</span>
+                                        <span class="btn-inner--brand">Play Store</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 ml-lg-auto align-self-end">
+                            <div class="position-relative" style="z-index: 10;">
+
+                                <form id="eeze-form"
+                                      class="form form-centered row align-items-center justify-content-center"
+                                      action="./login"
+                                      method="post">
+                                    <script id="eeze" src="/public/js/eeze.js"
+                                            data-key="bf40e6ee-fcb3-480d-ac73-31b66d30d871"
+                                            data-spinner="./public/img/spinner.svg">
+                                    </script>
+
+                                    <div id="flash" class="col-12 text-center">
+                                    {{ template "flash.html" . }}
+                                    </div>
+                                    <script>
+                                        console.log('heyy')
+                                        setTimeout(function () {
+                                            el = document.getElementById("flash")
+                                            console.log(el)
+                                            el.style.display = 'none';
+                                        }, 5000)
+                                    </script>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+{{template "footer.html" .}}
