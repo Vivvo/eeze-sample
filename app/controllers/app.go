@@ -28,8 +28,8 @@ func (c App) Login(token string) revel.Result {
 
 	utils.Resty(context.Background()).R().
 		SetHeader("Accept", "application/json").
-		SetHeader("Client-Id", "bf40e6ee-fcb3-480d-ac73-31b66d30d871").
-		SetHeader("Client-Secret", "2524f14f-f136-40dc-aba2-14dc08e1f441").
+		SetHeader("Client-Id", "947493fc-5fc8-4c9e-ab84-d7f03c95968c").
+		SetHeader("Client-Secret", "a879248a-93ed-4a75-9f3d-35bc2eae2590").
 		SetResult(&successfulAuthenticationDto).
 		Get(fmt.Sprintf("https://eeze.io/api/v1/did-auth/challenge/%s/user", token))
 
